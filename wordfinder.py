@@ -14,6 +14,7 @@ class WordFinder:
         print(f"{len(self.list_of_words)} words read")       
 
     def make_list(self):
+        """Adds words from file to the list"""
         with open(self.path, 'r') as file:
             for line in file:
                 self.list_of_words.append(line[:len(line)-1])
